@@ -49,9 +49,20 @@ def register(request):
     return render(request, 'register.html', {'form': form})
 
 
-def login(request, id):
-    Client = get_object_or_404(ClientForm, id=id)
-    return render(request, 'login.html', {'client': Client})
+def login(request):
+    if request.method == "POST":
+        username = request.POST.get("username")
+        password = request.POST.get("password")
+        Client = authenticate(username=username, password=password)
+
+        if Client is not None:
+            login(request, Client)
+            return redirect('/')
+
+        else:
+            return redirect('/login')
+
+    return render(request, "login.html")
 
 
 def token(request):
