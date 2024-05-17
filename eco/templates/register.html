@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    {% load static %}
+<title>EcoCircular|Register</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="{% static 'style.css' %}" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/arial.js"></script>
+<script type="text/javascript" src="js/cuf_run.js"></script>
+</head>
+<body>
+<!-- START PAGE SOURCE -->
+<div class="main">
+  <div class="header">
+    <div class="header_resize">
+      <div class="logo">
+        <h1>{% block header %}<a href="home.html"><span>Eco</span>Circular<br />
+          <small>Use. Recycle. Reuse.</small></a>{% endblock %}</h1>
+      </div>
+      <div class="clr"></div>
+      <div class="header_text_bg">
+        <div class="menu">
+          <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'services' %}" class="active">Services</a></li>
+            <li><a href="{% url 'about' %}"> About Us </a></li>
+            <li><a href="{% url 'contact' %}"> Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="search">
+          <form id="form1" name="form1" method="post" action="#">
+            <span>
+            <input name="q" type="text" class="keywords" id="textfield" maxlength="50" value="Search..." />
+            </span>
+            <input name="b" type="image" src="{% static 'images/search.gif' %}" class="button" />
+          </form>
+        </div>
+        <div class="clr"></div>
+        <img src="{% static 'images/environment-7412966_1280.png' %}" alt="" width="356" height="236" />
+        <div class="header_text_bg_resize">
+{#          <h2>Services</h2>#}
+          <h2>Welcome to EcoCircular, where environmental stewardship meets expert consultancy.</h2>
+          <p><a href="#">Read more</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br>
+<body>
+<form method="POST" class="post-form" action="/emp">
+        {% csrf_token %}
+    <div class="container">
+<br>
+    <div class="form-group row">
+    <label class="col-sm-1 col-form-label"></label>
+    <div class="col-sm-4">
+    <h3>Enter Details</h3>
+    </div>
+  </div>
+    <div class="mb-3">
+    <label for="InputId" class="form-label">Client ID*:</label>
+    <input type="Id" class="form-control" id="InputId">
+      {{ form.Id }}
+    </div>
+        <br>
+  </div>
+  </div>
+  <div class="mb-3">
+    <label for="InputName1" class="form-label">First Name*:</label>
+      {{ form.name }}
+  </div>
+    <br>
+  <div class="mb-3">
+    <label for="InputName2" class="form-label">Last Name*:</label>
+      {{ form.name }}
+  </div>
+    <br>
+  </div>
+    <div class="mb-3">
+    <label for="InputEmail1" class="form-label">Email Address*</label>
+         {{ form.email }}
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <br>
+  </div>
+  <div class="mb-3">
+    <label for="InputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="InputPassword1">
+      {{ form.password }}
+  </div>
+  </div>
+    <div class="form-group row">
+    <label class="col-sm-1 col-form-label"></label>
+    <div class="col-sm-4">
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+    </div>
+</form>
+<div class="footer">
+    <div class="footer_resize">
+      <p class="lf">Copyright &copy; 2024 <a href="#">EcoCircular</a> - All Rights Reserved</p>
+      <p class="rf">Design by <a href="http://www.hotwebsitetemplates.net">Martin Amadiva</a></p>
+      <div class="clr"></div>
+    </div>
+    <div class="clr"></div>
+  </div>
+
+
+
+{#<div class="row">#}
+{#  <div class="col">#}
+{#      <label for="inputFirstName" class="form-label">First Name</label>#}
+{#      <input type="text" class="form-control" placeholder="First name" aria-label="First name">#}
+{#  </div>#}
+{#  <div class="col">#}
+{#      <label for="inputLastName" class="form-label">Last Name</label>#}
+{#      <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">#}
+{#  </div>#}
+{#</div>#}
+{#<form class="row g-3">#}
+{#  <div class="col-md-6">#}
+{#    <label for="inputEmail4" class="form-label">Email</label>#}
+{#    <input type="email" class="form-control" id="inputEmail4">#}
+{#  </div>#}
+{#  <div class="col-md-6">#}
+{#    <label for="inputPassword4" class="form-label">Password</label>#}
+{#    <input type="password" class="form-control" id="inputPassword4">#}
+{#  </div>#}
+{#</form>#}
+{#<div class="footer">#}
+{#    <div class="footer_resize">#}
+{#      <p class="lf">Copyright &copy; 2024 <a href="#">EcoCircular</a> - All Rights Reserved</p>#}
+{#      <p class="rf">Design by <a href="http://www.hotwebsitetemplates.net">Martin Amadiva</a></p>#}
+{#      <div class="clr"></div>#}
+{#    </div>#}
+{#    <div class="clr"></div>#}
+{#  </div>#}
+{#</body>#}
+
+
+
+
+
+
+{##}
+{#<h1>Client Details</h1>#}
+{#<p>Name:{{ client.name }}</p>#}
+{#<p>Email: {{ client.email }}</p>#}
+{#<p>Message: {{ client.message }}</p>#}
+{#<p>Created at: {{ task.created_at }}</p>#}
+{#<a href="{% url 'task_edit' task.id %}">Edit</a>#}
+{#<form action="{% url 'task_delete' task.id %}"#}
+{#      method="post">#}
+{#    {% csrf_token %}#}
+{#    <button type="submit">Delete</button>#}
+{#</form>#}
+{#<a href="{% url 'task_list' %}">Back to list</a>#}
+{#</body>#}
+{#</html>#}

@@ -1,0 +1,129 @@
+<!DOCTYPEhtml PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    {% load static %}
+<title>EcoCircular | Home</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="{% static 'style.css' %}" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/arial.js"></script>
+<script type="text/javascript" src="js/cuf_run.js"></script>
+</head>
+<body>
+<!-- START PAGE SOURCE -->
+<div class="main">
+  <div class="header">
+    <div class="header_resize">
+      <div class="logo">
+        <h1>{% block header %}<a href="home.html"><span>Eco</span>Circular<br />
+          <small>Use. Recycle. Reuse.</small></a>{% endblock %}</h1>
+      </div>
+      <div class="clr"></div>
+      <div class="header_text_bg">
+        <div class="menu">
+          <ul>
+             <li><a href="{% url 'home' %}" class="active">Home</a></li>
+             <li><a href="{% url 'services' %}" >Services</a></li>
+             <li><a href="{% url 'about' %}"> About Us </a></li>
+             <li><a href="{% url 'contact' %}"> Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="search">
+          <form id="form1" name="form1" method="post" action="#">
+            <span>
+            <input name="q" type="text" class="keywords" id="textfield" maxlength="50" value="Search..." />
+            </span>
+            <input name="b" type="image" src="{% static 'images/search.gif' %}" class="button" />
+          </form>
+        </div>
+        <div class="clr"></div>
+        <img src="{% static 'images/environment-7412966_1280.png' %}" alt="" width="356" height="236" />
+        <div class="header_text_bg_resize">
+{#          <h2>Template License</h2>#}
+          <h2>Welcome to EcoCircular, where environmental stewardship meets expert consultancy.</h2>
+            <p><a href="#">Read more</a></p>
+        </div>
+        <div class="clr"></div>
+      </div>
+    </div>
+    <div class="clr"></div>
+  </div>
+  <div class="clr"></div>
+  <div class="body">
+    <div class="body_resize">
+      <div class="left">
+        <h2>Welcome </h2>
+        <p> Welcome to EcoCircular Consultancy, where we are committed to sustainable solutions for a greener tomorrow. Our team of dedicated experts is passionate about preserving and enhancing the environment through innovative strategies and practical advice. Whether you're a business looking to minimize your carbon footprint or an individual seeking eco-friendly alternatives, we're here to help you navigate the complexities of environmental management.</p>
+        <p><a href="#">Read more | Comments (5)</a></p>
+        <h2><span>Why Choose EcoCircular?</span> <br />
+        </h2>
+        <p>Why EcoCircular?
+
+Experienced Professionals: Our team comprises seasoned environmental consultants with diverse expertise and a proven track record of success.
+Tailored Solutions: We understand that each client's needs are unique, which is why we offer customized solutions that align with your specific goals and requirements.
+Cutting-edge Technology: We leverage the latest advancements in environmental science and technology to deliver innovative solutions that drive tangible results.
+Commitment to Sustainability: As stewards of the environment, we are deeply committed to promoting sustainable practices and reducing environmental impact in everything we do.
+Client-Centric Approach: We prioritize open communication, transparency, and collaboration to ensure that our clients are fully engaged throughout the process.</p>
+        <p><a href="#">Read more | Comments (11) </a></p>
+      </div>
+      <div class="right">
+        <h2> Training</h2>
+        <ul>
+          <li><a href="{% url 'register' %}">Register</a></li>
+          <li><a href="{% url 'login' %}">Login</a></li>
+            <button><a href="{% url 'pay' %}">Pay</a></button>
+{#          <li><a href="#">Style Demo</a></li>#}
+{#          <li><a href="#">Blog</a></li>#}
+{#          <li><a href="#">Archives</a></li>#}
+        </ul>
+         <h2>Partners</h2>
+        <ul class="sponsors">
+          <li><a href="#">Climate Interactive</a><br />
+{#            Donec libero. Suspendisse bibendum</li>#}
+          <li><a href="#">National Environment Management Authority</a><br/>
+{#            Phasellus suscipit, leo a pharetra</li>#}
+          <li><a href="#">Environment Institute of Kenya</a><br />
+{#            Tellus eleifend magna eget</li>#}
+          <li><a href="#">Emobilis Technology Training Institute</a><br/>
+{#            Curabitur vel urna in tristique</li>#}
+{#          <li class="sponsors"><a href="#">Suspendisse bibendum</a><br />#}
+{#            Cras id urna orbi tincidunt orci ac</li>#}
+{#          <li class="sponsors"><a href="#">Donec mattis</a><br />#}
+{#            purus nec placerat bibendum</li>#}
+        <p>&nbsp;</p>
+        <div class="clr"></div>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <div class="FBG">
+    <div class="FBG_resize">
+      <div class="blok2">
+        <h2>Our Mission</h2>
+        <img src="{% static 'images/recycling-7792185_1280.png' %}" alt="" width="68" height="68" />
+        <p>At EcoCircular, our mission is simple yet profound: to provide cutting-edge environmental solutions that promote sustainability, resilience, and prosperity for both present and future generations. </p>
+        <p>We believe that by leveraging our expertise and creativity, we can help navigate the complexities of environmental issues while fostering a harmonious relationship between humanity and nature.<br />
+          <a href="#">Learn more...</a></p>
+      </div>
+      <div class="blok">
+        <h2>Image <span>Gallery</span></h2>
+        <img src="{% static 'images/tree-309046_640.png' %}" alt="" width="68" height="68" /><img src=" {% static 'images/windmills-311837_640.png' %}" alt="" width="68" height="68" /><img src="{% static 'images/recycling-304974_640.png' %}" alt="" width="68" height="68" /> <img src="{% static 'images/plastic-waste-7617451_640.jpg' %}" alt="" width="68" height="68" /><img src="{% static 'images/industry-80956_640.jpg' %}" alt="" width="68" height="68" /><img src="{% static 'images/fbg_7.jpg' %}" alt="" width="68" height="68" />
+        <div class="clr"></div>
+        <h2>Vision </h2>
+        <p>Together, let's shape a sustainable future for generations to come. </p>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer_resize">
+      <p class="lf">Copyright &copy; 2024 <a href="#">EcoCircular</a> - All Rights Reserved</p>
+      <p class="rf">Design by <a href="http://www.hotwebsitetemplates.net">Martin Amadiva</a></p>
+      <div class="clr"></div>
+    </div>
+    <div class="clr"></div>
+  </div>
+</div>
+<!-- END PAGE SOURCE -->
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    {% load static %}
+<title>EcoCircular|Register</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="{% static 'style.css' %}" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/arial.js"></script>
+<script type="text/javascript" src="js/cuf_run.js"></script>
+</head>
+<body>
+<!-- START PAGE SOURCE -->
+<div class="main">
+  <div class="header">
+    <div class="header_resize">
+      <div class="logo">
+        <h1>{% block header %}<a href="home.html"><span>Eco</span>Circular<br />
+          <small>Use. Recycle. Reuse.</small></a>{% endblock %}</h1>
+      </div>
+      <div class="clr"></div>
+      <div class="header_text_bg">
+        <div class="menu">
+          <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'services' %}" class="active">Services</a></li>
+            <li><a href="{% url 'about' %}"> About Us </a></li>
+            <li><a href="{% url 'contact' %}"> Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="search">
+          <form id="form1" name="form1" method="post" action="#">
+            <span>
+            <input name="q" type="text" class="keywords" id="textfield" maxlength="50" value="Search..." />
+            </span>
+            <input name="b" type="image" src="{% static 'images/search.gif' %}" class="button" />
+          </form>
+        </div>
+        <div class="clr"></div>
+        <img src="{% static 'images/environment-7412966_1280.png' %}" alt="" width="356" height="236" />
+        <div class="header_text_bg_resize">
+{#          <h2>Services</h2>#}
+          <h2>Welcome to EcoCircular, where environmental stewardship meets expert consultancy.</h2>
+          <p><a href="#">Read more</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br>
+<body>
+    <form>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+        <br>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+        <br>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+        <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+      <div class="footer">
+        <div class="footer_resize">
+          <p class="lf">Copyright &copy; 2024 <a href="#">EcoCircular</a> - All Rights Reserved</p>
+          <p class="rf">Design by <a href="http://www.hotwebsitetemplates.net">Martin Amadiva</a></p>
+          <div class="clr"></div>
+        </div>
+          <div class="clr"></div>
+  </div>
+</body>
+</html>

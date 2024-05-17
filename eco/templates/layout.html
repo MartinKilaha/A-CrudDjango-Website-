@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css" />
+   <script type="text/javascript" src="js/cufon-yui.js"></script>
+    <script type="text/javascript" src="js/arial.js"></script>
+    <script type="text/javascript" src="js/cuf_run.js"></script>
+    <meta charset="UTF-8">
+    <title>{% block title %}Title{% endblock %}</title>
+</head>
+<body>
+<header>
+    <h2>{% block header %} Welcome to EcoCircular{% endblock %}</h2>
+
+<nav>
+    <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'services' %}" class="active">Services</a></li>
+            <li><a href="{% url 'about' %}"> About Us </a></li>
+            <li><a href="{% url 'contact' %}"> Contact Us</a></li>
+    </ul>
+</nav>
+</header>
+<main>
+    {% block content %}{% endblock %}
+</main>
+<div class="footer">
+    <div class="footer_resize">
+      <p class="lf">Copyright &copy; 2024 <a href="#">EcoCircular</a> - All Rights Reserved</p>
+      <p class="rf">Design by <a href="http://www.hotwebsitetemplates.net">Martin Amadiva</a></p>
+      <div class="clr"></div>
+    </div>
+    <div class="clr"></div>
+  </div>
+
+
+</body>
+</html>
